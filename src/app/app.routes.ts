@@ -12,18 +12,18 @@ import { LoginComponent } from './registration/login/login.component';
 import { ForgotPasswordComponent } from './registration/forgot-password/forgot-password.component';
 
 export const routes: Routes = [
-    {path:'',redirectTo:'/home',pathMatch:'full'},
     {path:'home', component:HomeComponent},
     {path: 'article/:id',component: DetailComponent},
     {path:'create',component: CreatearticleComponent, canActivate:[authGuard]},
     {path:'about',component:AboutComponent},
-
+    
     {path:'privacy', component: PrivacyComponent},
     {path:'author/:id',component:AuthorComponent},
-
+    
     {path:'login',component:LoginComponent},
     {path:'register',component: RegisterComponent},
     {path:'forgot',component: ForgotPasswordComponent},
-
+    
+    {path:'',redirectTo:'/home',pathMatch:'full'},
     {path:'**',component:NotfoundComponent}
 ];
